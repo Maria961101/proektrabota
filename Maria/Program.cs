@@ -1,58 +1,7 @@
-﻿using System;
+using System;
 namespace Task1
 {
-    public class Phone
-    {
-        private int number;
-        private string model = "";
-        private int weight;
-        public void printArgs()
-        {
-            Console.Write(number);
-            Console.Write(model);
-            Console.Write(weight);
-        }
-        public void sendMessage(params string[] numbers)
-        {
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                Console.Write(numbers[i] + " ");
-            }
-            Console.WriteLine();
-        }
-        public int getNumber()
-        {
-            return number;
-        }
-        public void recieveCall(string name)
-        {
-            Console.WriteLine("\n Звонит ");
-            Console.Write(name);
-        }
-        public void recieveCall(string name, int number)
-        {
-            Console.WriteLine("\n Звонит ");
-            Console.Write(name);
-            Console.Write(number);
-        }
-        public Phone(int e, string m, int b) : this(e, m)
-        {
-            weight = b;
-        }
-        public Phone(int e, string m)
-        {
-            number = e;
-            model = m;
-            weight = 0;
-        }
-        public Phone()
-        {
-            number = 0;
-            model = "";
-            weight = 0;
-        }
-    }
-    public static class Globals
+    public static class Task1
     {
         public static int averageTemp(Seasons season)
         {
@@ -145,8 +94,6 @@ namespace Task1
             Console.Write(returnString(Seasons.winter));
         }
     }
-
-
     public class Person
     {
         private string fullName = "";
@@ -170,6 +117,57 @@ namespace Task1
         {
             Console.Write(fullName);
             Console.Write(" говорит ");
+        }
+    }
+    public class Phone
+    {
+        private int number;
+        private string model = "";
+        private int weight;
+        public void printArgs()
+        {
+            Console.Write(number);
+            Console.Write(model);
+            Console.Write(weight);
+        }
+        public void sendMessage(params string[] numbers)
+        {
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.Write(numbers[i] + " ");
+            }
+            Console.WriteLine();
+        }
+        public int getNumber()
+        {
+            return number;
+        }
+        public void recieveCall(string name)
+        {
+            Console.WriteLine("\n Звонит ");
+            Console.Write(name);
+        }
+        public void recieveCall(string name, int number)
+        {
+            Console.WriteLine("\n Звонит ");
+            Console.Write(name);
+            Console.Write(number);
+        }
+        public Phone(int e, string m, int b) : this(e, m)
+        {
+            weight = b;
+        }
+        public Phone(int e, string m)
+        {
+            number = e;
+            model = m;
+            weight = 0;
+        }
+        public Phone()
+        {
+            number = 0;
+            model = "";
+            weight = 0;
         }
     }
     public enum Seasons
